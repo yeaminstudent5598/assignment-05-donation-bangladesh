@@ -22,17 +22,18 @@
     body{
         font-family: "Lexend", sans-serif;
     }
+    
        </style>
 
 </head>
-<body>
+<body class="">
 
     <!-- header -->
-    <header>
+    <header class="h-60 sticky top-0 z-0 ">
        
         <!-- navbar section -->
        <nav class="bg-[#F9F7F3] py-9 px-5">
-        <div class="navbar">
+        <div class="navbar w-[95%]   mx-auto">
             <div class="navbar-start">
               
               <a class="btn text-xl bg-[#B4F461]">Blog</a>
@@ -47,10 +48,100 @@
             </div>
           </div>
        </nav>
+
+       <!-- button section -->
+        
+       <section class="flex justify-center pt-6 gap-4 backdrop-blur-md h-1/2">
+        <button class="btn py-4 px-8  bg-[#B4F461]">Donation</button>
+       <button class="btn py-4 px-8 bg-transparent border border-[#1111114D] text-[#111111B3] duration-[0.4s] hover:[#1111110c]">History</button>
+       </section>
        
     </header>
     <!-- main -->
      <main>
+
+        <section class="w-[95%] mx-auto">
+
+            <!-- donate card 1 -->
+            <div class=" p-8 border border-[#1111111a] rounded-2xl mt-8">
+                <div class="flex gap-8 flex-col lg:flex-row">
+                  <img
+                    src="assets/noakhali.png"
+                    class="rounded-lg shadow-2xl" />
+                  <div class="flex flex-col">
+                    <div class="flex w-36 p-4  border-none rounded-lg gap-2 bg-[#1111110D]">
+                        <img  src="assets/coin.png" alt="cheap-2"/>
+                        <h5><span id="card-amount-1">5500</span> BDT</h5>
+                    </div>
+                    <h1 class="text-xl font-bold pt-4">Donate for Flood at Noakhali, Bangladesh</h1>
+                    <p class="font-light text-[#111111B3] pb-6 pt-4">
+                        The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+                    </p>
+                    <input class="p-[18px] border border-[#1111111a] rounded-lg" id="card-input-1" placeholder="Write Donation Amount" type="text">
+                    <button class="btn bg-[#B4F461] mt-4 text-xl font-semibold">Donate Now</button>
+                  </div>
+                </div>
+              </div>
+              <!-- card 2 -->
+            <div class=" p-8 border border-[#1111111a] rounded-2xl mt-8">
+                <div class="flex gap-8 flex-col lg:flex-row">
+                  <img
+                    src="assets/feni.png"
+                    class="rounded-lg shadow-2xl" />
+                  <div class="flex flex-col">
+                    <div class="flex w-36 p-4  border-none rounded-lg gap-2 bg-[#1111110D]">
+                        <img  src="assets/coin.png" alt="cheap-2"/>
+                        <h5><span id="card-amount-1">5500</span> BDT</h5>
+                    </div>
+                    <h1 class="text-xl font-bold pt-4">Donate for Flood Relief in Feni,Bangladesh</h1>
+                    <p class="font-light text-[#111111B3] pb-6 pt-4">
+                        The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
+                    </p>
+                    <input class="p-[18px] border border-[#1111111a] rounded-lg" id="card-input-1" placeholder="Write Donation Amount" type="text">
+                    <button class="btn bg-[#B4F461] mt-4 text-xl font-semibold">Donate Now</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card 3 -->
+
+            <div class=" p-8 border border-[#1111111a] rounded-2xl mt-8">
+                <div class="flex gap-8 flex-col lg:flex-row">
+                  <img
+                    src="assets/quota-protest.png"
+                    class="rounded-lg shadow-2xl" />
+                  <div class="flex flex-col">
+                    <div class="flex w-36 p-4  border-none rounded-lg gap-2 bg-[#1111110D]">
+                        <img  src="assets/coin.png" alt="cheap-2"/>
+                        <h5><span id="card-amount-1">5500</span> BDT</h5>
+                    </div>
+                    <h1 class="text-xl font-bold pt-4">Aid for Injured in the Quota Movement</h1>
+                    <p class="font-light text-[#111111B3] pb-6 pt-4">
+                        The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
+                    </p>
+                    <input class="p-[18px] border border-[#1111111a] rounded-lg" id="card-input-1" placeholder="Write Donation Amount" type="text">
+                    <button class="btn bg-[#B4F461] mt-4 text-xl font-semibold">Donate Now</button>
+                  </div>
+                </div>
+              </div>
+        </section>
+
+        <!-- alert -->
+
+        
+            <section  class="flex flex-col gap-8 w-[95%] mx-auto p-6"> </section>
+                <section id="modal-popup" class="hidden fixed top-0 left-0 z-20 w-full h-full bg-[#00000066] overflow-auto flex justify-center items-center display none">
+                <div class="py-8 px-16 bg-white flex flex-col gap-6 items-center rounded-xl">
+                    <h1>Congratulation!</h1>
+                    <img width="64" height="64" src="https://img.icons8.com/nolan/64/coin-in-hand.png" alt="coin-in-hand"/>
+                    <p>You Have Donated for Humankind</p>
+                    <h3>Successfully</h3>
+                    <div>
+                        <button id="close-modal" class="btn py-4 px-8 bg-transparent border border-[#1111114D] text-[#111111B3] duration-[0.4s] hover:[#1111110c]">close confirmation</button>
+                    </div>
+                </div>
+            </section>
+        
 
      </main>
 </body>
