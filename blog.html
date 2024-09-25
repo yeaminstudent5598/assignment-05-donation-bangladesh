@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh Blog</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+
+    <!-- daisy ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Donate Bangladesh</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.30.0/dist/full.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: "480px",
+            md: "768px",
+            lg: "976px",
+            xl: "1440px",
+          },
+          colors: {
+            primary: "#B4F461",
+            secondary: "#111111",
+            btnColor: "rgba(17, 17, 17, 0.05)",
+          },
+          fontFamily: {
+            lexend: ["Lexend", "sans-serif"],
+          },
+        },
+      };
+    </script>
+
+    <style>
+        .faq{
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .faq h1{
+            font-size: 1.5rem;
+            font-weight: 600;
+
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- header section -->
+    <header>
+        <!-- nav section -->
+        <div class="bg-[#f9f7f3] py-6 ">
+            <nav
+              class="navbar top-0 text-white md:max-w-[95%] mx-auto  gap-y-6 md:gap-y-0 flex items-center  lg:justify-between"
+            >
+              <div class="">
+                <a class='bg-primary py-3 px-5 rounded-xl normal-case text-xl font-semibold' href='/index.html'>Home</a
+                >
+              </div>
+              <div class="flex gap-3 justify-center">
+                <img src="./assets/logo.png" alt="Logo" />
+                <h1 class="font-semibold text-xl invisible lg:visible">Donate Bangladesh</h1>
+              </div>
+              <div class="">
+                <div class="flex gap-2 font-medium text-xl">
+                  <img src="./assets/coin.png" alt="" />
+                  <span id="balance" class=""> 13300</span> BDT
+                </div>
+              </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- main section -->
+    <main>
+        <section class="width padding">
+            <div class="faq flex">
+                <h1>Important FAQ </h1>
+                <img width="40" height="40" src="https://img.icons8.com/office/40/faq.png" alt="faq"/>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                  <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document (like an HTML or XML document) as a tree of objects that can be manipulated with scripts such as JavaScript. Essentially, it allows developers to interact with the content, structure, and style of a web page programmatically.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                  <p>Selecting an element from the DOM involves using JavaScript methods to identify and interact with specific parts of a web page. You can use the getElementById method to select an element by its unique ID, which is helpful when you want to manipulate a single, specific element. For selecting multiple elements that share a common style or function, the getElementsByClassName method allows you to target all elements with a specific class. Alternatively, you can use the getElementsByTagName method to select all elements of a particular type, like paragraphs or div. For more complex selections, the querySelector and querySelectorAll methods are powerful tools that let you use CSS-style selectors to identify elements. This means you can select elements based on their tag names, classes, IDs, attributes, or even combinations of these. Once you've selected an element, you can navigate the DOM tree to find related elements, accessing parents, children, or siblings to make more precise selections. Overall, mastering these selection methods is key to effectively manipulating and updating web page content dynamically.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful? </div>
+                <div class="collapse-content">
+                  <p>Event delegation is a technique in the context of the DOM that involves attaching a single event listener to a parent element rather than adding individual listeners to each child element. This method takes advantage of the event bubbling mechanism, where an event triggered on a child element propagates upward to its parent elements. When an event occurs, the parent element captures it, allowing you to determine which specific child element was the target of the event and handle it accordingly. This approach offers several advantages. First, it enhances performance, especially when dealing with numerous child elements, as it reduces memory usage by requiring only one event listener instead of many. It is also beneficial for handling dynamic content since newly added child elements will automatically trigger the parent's event listener without needing to reattach listeners. Furthermore, event delegation simplifies code maintenance by consolidating event handling for multiple elements into a single function, making the codebase cleaner and more organized. Overall, event delegation is a powerful and efficient strategy for managing events in web development, providing both performance benefits and ease of use.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                <div class="collapse-content">
+                  <p>Manipulating an element's attributes and styles using the DOM involves accessing the specific element through JavaScript and then modifying its properties. To manipulate attributes, you can use methods like setAttribute, which allows you to define or change an attribute's value, such as changing the src of an image or the href of a link. You can also retrieve an attribute's current value using getAttribute, enabling you to check existing settings before making changes. For example, if you have an img element and you want to change its source, you would first select the image using a method like getElementById or querySelector, and then apply setAttribute to update the src attribute with a new image URL. When it comes to styling, you can manipulate an element’s styles directly using the style property. This property allows you to set CSS styles inline, such as changing the background color or font size. For instance, by selecting an element and assigning a value to its style property, you can dynamically change its appearance on the page. You can also use CSS classes to manage styles more effectively; by adding or removing classes from an element’s classList, you can apply predefined styles without directly modifying inline styles. This approach not only keeps the JavaScript cleaner but also maintains separation between structure and presentation. Overall, manipulating attributes and styles through the DOM enables dynamic interaction and responsive design in web applications.</p>
+                </div>
+              </div>
+            
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer></footer>
+
+    <!-- javaScript link -->
+    <script src="index.js"></script>  
+
+</body>
+</html>
