@@ -66,7 +66,7 @@ function donate(cardId) {
   // historyItem.innerText = `${donationAmount} BDT donated to card ${cardId} on ${now.toLocaleString()}`;
   historyItem.innerHTML = `
   <div class="list-none px-6 py-8 shadow-xl"><h3 class="text-xl">${donationAmount} Taka is Donated for ${h2Text}</h3>
-  <p class="pt-3">Date: ${now.toLocaleString()}</p></div>
+  <p class="pt-3">Date: ${now}</p></div>
 `;
 
   document.getElementById("historyList").appendChild(historyItem);
